@@ -30,12 +30,16 @@ public class Main {
                 Pessoa p = new Pessoa();
                 System.out.println("Nome: ");
                 p.nome = sc.nextLine();
+                sc.nextLine();
                 System.out.println("Idade: ");
-                p.idade = Integer.parseInt(sc.nextLine());
+                p.idade = sc.nextInt();
+                sc.nextLine();
                 System.out.println("Telefone: ");
                 p.telefone = sc.nextLine();
+                sc.nextLine();
                 System.out.println("Email: ");
                 p.email = sc.nextLine();
+                sc.nextLine();
                 pessoas.add(p);
             }
 
@@ -56,7 +60,7 @@ public class Main {
                 boolean encontrado = false;
                 for (Pessoa pessoa : pessoas) {
                     if (pessoa.nome.equalsIgnoreCase(buscarNome)) { // mesma coisa pra ca
-                        System.out.println("Nome: " + pessoa.nome + ", Idade: " + pessoa.idade + ", Telefone: " + pessoa.telefone + ", Email: " + pessoa.email);
+                        System    .out.println("Nome: " + pessoa.nome + ", Idade: " + pessoa.idade + ", Telefone: " + pessoa.telefone + ", Email: " + pessoa.email);
                         encontrado = true;
                     }
                 }
@@ -110,4 +114,5 @@ public class Main {
             }
         }
     }
+
 }
